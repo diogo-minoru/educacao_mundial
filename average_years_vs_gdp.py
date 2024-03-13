@@ -37,6 +37,7 @@ dataset2_filtered = dataset2_filtered[~dataset2_filtered["Code"].str.contains("O
 # Fazendo com que a coluna "Entity" não seja mais a coluna índice do dataframe
 dataset2_filtered = dataset2_filtered.reset_index()
 # Removendo quaisquer outras linhas que sejam nulas
+# dropna(subset["nome coluna"]) remove linhas nulas onde o campo "nome coluna" é vazio
 dataset2_filtered = dataset2_filtered.dropna()
 # Verificando se ainda há alguma linha nula no dataset
 dataset2_filtered.isnull().sum()
